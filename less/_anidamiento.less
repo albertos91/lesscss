@@ -1,0 +1,13 @@
+@import (reference) "./_variables.less";
+@import (reference) "./_mixins.less";
+header {
+  background: @color2;
+  ul {
+    text-decoration: none;
+    li {
+      color: @color1;
+      /*Variable de mixin.less*/
+      .bordes-1();
+    }
+  }
+}

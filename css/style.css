@@ -1,7 +1,30 @@
 /*Importar archivos*/
+p {
+  font-size: 100px;
+}
+
+/*inline no lo compila pero si lo incluye en la salida css */
+/*reference: use un archivo Less pero no lo compula no lo incluye en el archivo less y css */
+header {
+  background: white;
+}
+header ul {
+  text-decoration: none;
+}
+header ul li {
+  color: red;
+  /*Variable de mixin.less*/
+  border: solid 5px #fef;
+  padding: 15px 0;
+}
 /*Variable importada desde el archivo _variables.less*/
 body {
   background: red;
   color: white;
   font-family: sans-serif;
+}
+/*Mixin desde archico _mixin.less*/
+small {
+  border: solid 5px #fef;
+  padding: 15px 0;
 }

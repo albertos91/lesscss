@@ -1,0 +1,16 @@
+Es una forma de incluir ("mezclar") un montón de propiedades de un conjunto de reglas en otro conjunto de reglas
+
+.bordes-1 {
+  border: solid 5px #fef;
+  padding: 115px 0;
+}
+
+//usar
+p{
+  .bordes-1();// Agarra todas las propiedaddes del mixin
+}
+//Sale 
+p{
+    border: solid 5px #fef;
+  padding: 115px 0;
+}

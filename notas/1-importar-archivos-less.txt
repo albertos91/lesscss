@@ -5,3 +5,17 @@
 
 importar archivos css
 @import "typo.css";
+
+
+//Opciones de importación
+
+
+@import (opcion1, opcion2) "filename";
+
+reference: use un archivo Less pero no lo compula no lo incluye en el archivo less y css
+inline: incluya el archivo fuente en la salida css, pero no lo compila
+less: trata el archivo como un archivo Less, sin importar la extensión del archivo
+css: trata el archivo como un archivo CSS, sin importar la extensión del archivo
+once: solo incluye el archivo una vez (este es el predeterminado)
+multiple: incluye el archivo varias veces
+optional: continuar compilando cuando no se encuentra el archivo
