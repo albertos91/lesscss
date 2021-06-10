@@ -1,0 +1,13 @@
+@var1: 10px;
+@var2: @var1 + 10px;
+
+#header {
+  width: @var1;
+  height: @var2;
+}
+
+//compilara 
+#header {
+  width: 10px;
+  height: 20px;
+}

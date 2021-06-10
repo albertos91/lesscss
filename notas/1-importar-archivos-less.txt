@@ -1,0 +1,7 @@
+@import "library"; // library.less Para archivos less
+// Para que no se compile un archivo importado poner guion bajo en el nombre del archivo
+./ruta/_archivo.less
+// @import "./ruta/_archivo.less" //Este no se compilara
+
+importar archivos css
+@import "typo.css";

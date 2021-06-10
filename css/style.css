@@ -1,0 +1,7 @@
+/*Importar archivos*/
+/*Variable importada desde el archivo _variables.less*/
+body {
+  background: red;
+  color: white;
+  font-family: sans-serif;
+}
