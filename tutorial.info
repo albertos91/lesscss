@@ -89,7 +89,7 @@ body{
   propiedad:@variable;
 }
 body{
-  .max-width(80%); //Calculara el 80% de los valores(1024px)
+  .max-width(80%); //Calculara el 80% de los valores(1024px) que usan la @variable
 }
 Compila 
 body{

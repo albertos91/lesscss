@@ -1,0 +1,31 @@
+**************
+**** Mixins *********  
+Los mixin no van a crear ningun elemento extra hasta que lo utilicemos
+.max-width(){
+  propiedad:valor1;
+  propiedad:valor2;
+}
+//Para usarlo sin parametro
+
+body{
+  .max-width;
+}
+Compila 
+body{
+  propiedad:valor1;
+  propiedad:valor2;
+}
+
+//Para usarlo con parametro
+.max-width(@variable: 1024px){
+  propiedad:valor1;
+  propiedad:@variable;
+}
+body{
+  .max-width(80%); //Calculara el 80% de los valores(1024px) que usan la @variable
+}
+Compila 
+body{
+  propiedad:valor1;
+  propiedad:valor2(80%);
+}
