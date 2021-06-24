@@ -1,0 +1,107 @@
+Organizar carpetas
+1 Carpeta 1(Elementos base de html) cualquier css que modifique un elemento base de html deb estar aqui
+  elemento
+2 carpeta 2(Clases y los ID)  
+
+Organizacion de carpetas
+-scss
+  --_style.less
+  --base (Elementos de html, botonoes, imput,titulos, parrafos, etc)
+      --_tipografia.less
+      --_botones.less
+      --_grid.less
+  --lib(Solo codigo de less, mixins, funciones)  
+      --_variables.less  
+para que no compile todos los archivos y solo compile un css guardar los demas archivos less con _(guin bajo). _tipografia.less      
+
+y para importar archivos less dentro del archivo principal style.less
+  @import "./base/_tipografia.less";
+
+**************
+**** Variables *********  
+una variables es un contenedor de un valor para reutilizarlo.
+  los colores deben ir en variables
+****/Constantes****  
+  Los padings, margins, separaciones
+
+**************
+**** Anidaciones *********  
+Referenciar al padre del elemento sin escribir otro elemento
+
+ ul{
+   propiedad:valor1;
+   propiedad:valor2;
+   li{
+     propiedad:valor1;
+     propiedad:valor2;
+   //Para que no ponga espacios en las pseuduclases poner &
+   &:hover{
+     propiedad:valor1;
+     propiedad:valor2;
+     //Pone hover en el elemento li
+    }
+   }
+
+ }
+**// o tambien //**
+.btn{
+  propiedad:valor1;
+  &:hover{
+    propiedad:valor1;
+  }
+  &--alert{
+    propiedad:valor1;
+  }
+}
+//imprime
+.btn{
+  propiedad:valor1;
+}
+.btn:hover{
+  propiedad:valor1;
+}
+.btn--alert{
+  propiedad:valor1;
+}
+
+
+**************
+**** Mixins *********  
+Los mixin no van a crear ningun elemento extra hasta que lo utilicemos
+.max-width(){
+  propiedad:valor1;
+  propiedad:valor2;
+}
+//Para usarlo sin parametro
+
+body{
+  .max-width;
+}
+Compila 
+body{
+  propiedad:valor1;
+  propiedad:valor2;
+}
+
+//Para usarlo con parametro
+.max-width(@variable: 1024px){
+  propiedad:valor1;
+  propiedad:@variable;
+}
+body{
+  .max-width(80%); //Calculara el 80% de los valores(1024px)
+}
+Compila 
+body{
+  propiedad:valor1;
+  propiedad:valor2(80%);
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+.btn {
+  display: inline-block;
+  line-height: 2.2em;
+  color: @buttontxt;
+  background-color: @buttonbg;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  padding-left: 1em;
+  padding-right: 1em;
+  &:hover {
+    // el & hace referencia al padre y pone su pseudoclase
+    // & -> quiere decir el padre en este caso el padre es la clase .btn
+    text-decoration: none;
+    color: @buttontxt;
+  }
+  &--alert {
+    background-color: @color-alert;
+  }
+}
