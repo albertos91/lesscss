@@ -83,6 +83,34 @@
 > Para que no ponga espacios en las pseuduclases poner &
 
 ```less
+#header {
+  color: black;
+  .navigation {
+    font-size: 12px;
+  }
+  .logo {
+    width: 300px;
+  }
+}
+```
+
+> Imprime
+
+```css
+#header {
+  color: black;
+}
+#header .navigation {
+  font-size: 12px;
+}
+#header .logo {
+  width: 300px;
+}
+```
+
+> Para que no ponga espacios en las pseuduclases poner &
+
+```less
 ul {
   propiedad: valor1;
   propiedad: valor2;
@@ -137,5 +165,59 @@ ul li:hover {
 }
 .btn--alert {
   propiedad: valor1;
+}
+```
+
+# 3. Mixins
+
+> Los mixin no van a crear ningun elemento extra hasta que lo utilicemos.
+
+> Es una forma de incluir ("mezclar") un montón de propiedades de un conjunto de reglas en otro conjunto de reglas
+
+```less
+.bordes-1() {
+  border: solid 5px #fef;
+  padding: 115px 0;
+}
+```
+
+> Usar
+
+```less
+p{
+  .bordes-1();
+  // Agarra todas las propiedaddes del mixin
+```
+
+> Sale o imprime
+
+```css
+p {
+  border: solid 5px #fef;
+  padding: 115px 0;
+}
+```
+
+### 3.1 Mixins parametricos
+
+> Para usarlos con variables y no estar cambiando valores manualmente.
+
+```less
+//Valor de la @variable que tengo que pasar un valor al usar el mixin
+.max-width(@variable: 1024px) {
+  propiedad: valor1;
+  propiedad: @variable;
+  // @variable tiene 1024px
+}
+body {
+  .max-width(80%);
+  //Calculara el 80% del  valor(1024px) que usa la @variable
+  // si no se pone parametro usa el valor por defecto.
+}
+//Compila
+body {
+  propiedad: valor1;
+  propiedad: 819, 2px;
+  //819,2 es el 80% de 1024
 }
 ```
