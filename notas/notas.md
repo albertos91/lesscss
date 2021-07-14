@@ -221,3 +221,30 @@ body {
   //819,2 es el 80% de 1024
 }
 ```
+
+# 4. Parciales o creación de archivos
+
+> ### Archivos y carpetas para un proyecto less
+>
+> > ![Muestra de la imagen](./notas-img/notas1.png "Imagen de referencia de creacion de archivos en sus directorios")
+
+> ### Imagen de los archivos y sus directorios
+>
+> > ![Imagen](./notas-img/notas2.png "directorios del proyecto")
+
+### 4.1 Estructura del archivo _style.less_
+
+```less
+@import "./lib/_variables.less";
+@import "./lib/mixins.less";
+
+@import "./base/_tipografia.less";
+@import "./base/_botones.less";
+@import "./base/_tablas.less";
+@import "./components/_grid.less";
+
+@import "./layout/_layout.less";
+
+@import "./components/_utilities.less";
+//Este archivo va a tener clases de uso masivo
+```
