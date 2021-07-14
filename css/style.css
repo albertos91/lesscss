@@ -34,3 +34,9 @@ p {
   margin-right: auto;
   color: rebeccapurple;
 }
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}

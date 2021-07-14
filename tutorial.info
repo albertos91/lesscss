@@ -98,10 +98,30 @@ body{
 }
 
 
+**************
+**** Todos los posibles parciales(Archivos y carpetas para un proyecto) *********  
+Agregar variables al archivo _variables.less
 
+//el archivo style.less quedaria asi
+  @import "./lib/_variables.less";
+  @import "./lib/mixins.less";
 
+  @import "./base/_tipografia.less";
+  @import "./base/_botones.less";
+  @import "./base/_tablas.less";
+  @import "./components/_grid.less";
 
+    @import "./layout/_layout.less";
 
+  @import "./components/_utilities.less";
+            //Este archivo va a tener clases de uso masivo
+            .align-right{ text-align:right}
+            //Se pone generalmente a lo ultimo del style.less
+
+//Crear archivos
+./scss/base/_tablas.less
+./scss/components/_grid.less
+./scss/components/_utilities.less
 
 
 
